@@ -2,7 +2,7 @@
 
 ## Presentación del Desafío
 
-![Pantalla VSCode](./frontend/images/pantallasPY.png.png)
+![Pantalla VSCode](./frontend/images/pantallasPY.png)
 
 ## <br/>
 
