@@ -1,35 +1,49 @@
-# Módulo 6 Backend con Node js y Express js - Desafío 5 - Diseño avanzado de una API REST
+# Módulo 6 Backend con Node js y Express js - Desafío 6 - Autenticación y Autorización de Usuarios con JWT
 
 ## Presentación del Desafío
 
-![Pantalla VSCode](./images/consulta1.png)
+![Pantalla VSCode](./frontend/images/pantallasPY.png.png)
 
 ## <br/>
 
 ## Descripción del PY ⌨️
 
-La tienda de joyas My Precious Spa necesita cambiar su aplicación de escritorio por una moderna y dinámica. Para realizar este desafío, como desarrollador Full Stack Developer desarrollé la API REST de una aplicación cliente para satisfacer las necesidades puntuales de sus usuarios de una forma eficiente, mantenible y eficaz.
+La empresa Soft Jobs ha iniciado el desarrollo de una plataforma que busca apoyar a la
+comunidad de desarrolladores juniors a conseguir trabajos cortos y sencillos para acumular
+experiencia laboral y mejorar sus oportunidades. En este desafío como backend developer de la empresa crearé un servidor para la
+autenticación y autorización de usuarios usando JWT.
 
 ## Requerimientos entregados:
 
-La API REST desarrollada permite:
-
-1. Tener límite de recursos
-2. Filtro de recursos por campos
-3. Paginación
-4. Ordenamiento
-5. Estructura de datos HATEOAS
+1. Registrar y obtener usuarios de la base de datos.
+2. Usar middlewares para:
+   ● Verificar la existencia de credenciales en la ruta que corresponda.
+   ● Validar el token recibido en las cabeceras en la ruta que corresponda.
+   ● Reportar por la terminal las consultas recibidas en el servidor.
+3. Firmar, verificar y decodificar tokens JWT.
+4. Capturar y devolver los posibles errores que ocurran en el servidor.
+5. Encriptar las contraseñas al momento de registrar nuevos usuarios.
 
 Para ejecutar el PY:
 
-1. Subir el servidor, ejecutando en el bash: node index.js
-2. Abrir el Thunder Client y ejecutar las consultas HTTP realizadas a las rutas GET correspondientes a los requerimientos de este desafío. Ver pantallas del Readme.
+1. Subir el servidor, ejecutando en el bash: node index.js (ubicarse en la carpeta backend).
+2. Ejecutar en el bash: npm run dev (ubiucarse en la carpeta frontend).
+
+Para realizar este desafío se ejecutó el siguiente script sql en la terminal psql, para crear la base de datos y la tabla necesaria:
+
+CREATE DATABASE softjobs;
+\c softjobs;
+
+CREATE TABLE usuarios ( id SERIAL, email VARCHAR(50) NOT NULL, password VARCHAR(60) NOT NULL, rol VARCHAR(25), lenguage VARCHAR(20) );
+
+SELECT \* FROM usuarios;
 
 ## <br/>
 
 ## Tecnologías Usadas 🛠️
 
-- **Backend:** Node.js, Express.js, Java js. 🧑‍💻
+- **Backend:** Node.js, Express.js, Java js, JWT. 🧑‍💻
+- **Frontend:** HTML, CSS, Bootstrap, React.
 - **Almacenamiento:** BDD PostgreSQL. 🫙
 
 <br/>
